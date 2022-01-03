@@ -1,0 +1,123 @@
+@import "../../assets/scss/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+.sidebar {
+  display: flex;
+  height: 100vh;
+  .content__izquierdo__hamburger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $azul-dark;
+    border-radius: 0 5px 5px 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 25%;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 1s ease;
+    &.initial {
+      left: 0;
+      transition: all 0.8s ease;
+    }
+    span {
+      width: 70%;
+      margin: 0 auto;
+      height: 0.3rem;
+      background-color: $azul;
+      &:nth-child(2) {
+        margin: 0.2rem auto;
+      }
+    }
+  }
+
+  .content__izquierdo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: $azul-dark;
+    position: relative;
+    padding: 2rem;
+    transition: all 1s;
+    border-bottom-right-radius: 20px;
+
+    &.hide {
+      width: 0;
+      opacity: 0;
+      transition: all 0.8s;
+    }
+
+    .content__izquierdo__title {
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Ultra", serif;
+        color: $white-gray;
+        font-weight: 400;
+      }
+      .content__izquierdo__title--perfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        img {
+          display: block;
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin: 1rem 0;
+          border: 5px solid $bg-login;
+        }
+        p {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: $white-gray;
+          text-align: center;
+        }
+      }
+    }
+    .content__izquierdo__menu {
+      flex: 1;
+      padding-top: 3rem;
+      ul {
+        list-style: none;
+        font-size: 1.5rem;
+        li {
+          margin-bottom: 2rem;
+          color: $white-gray;
+
+          i {
+            margin-right: 1rem;
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+          &:hover {
+            color: $azul;
+          }
+        }
+      }
+    }
+  }
+  .content__derecho {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: $white-gray;
+    overflow: auto;
+    position: relative;
+    &.overflow {
+      overflow: unset;
+    }
+  }
+}
+
+.active--link {
+  color: $azul !important;
+  text-decoration: underline;
+}

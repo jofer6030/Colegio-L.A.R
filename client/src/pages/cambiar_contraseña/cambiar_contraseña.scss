@@ -1,0 +1,36 @@
+@import "../../assets/scss/variables.scss";
+.cambiar_contra {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../assets/img/bg-form.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.cambiar_container {
+  max-width: 500px;
+  padding: 2rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-login;
+  border-radius: 10px;
+  .title {
+    margin-top: 0;
+  }
+
+  .formulario {
+    width: 100%;
+
+    button {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../assets/scss/variables.scss";
+.formulario {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    position: relative;
+    margin-bottom: 2.5rem;
+    &.names {
+      display: flex;
+      gap: 1rem;
+      .input__info {
+        flex: 1;
+        position: relative;
+      }
+    }
+    label {
+      position: absolute;
+      top: 30%;
+      left: 15px;
+      pointer-events: none;
+      font-weight: 500;
+      color: $gray;
+      span {
+        color: $green;
+      }
+    }
+    .reduce {
+      top: -15px;
+      left: 0px;
+      font-size: 0.8rem;
+      transition: all 0.3s ease-in-out;
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      font-family: inherit;
+      background-color: transparent;
+      border: 1px solid $gray;
+      font-size: 1rem;
+      color: $white;
+      outline: none;
+      &:focus {
+        transition: all 0.3s ease-in-out;
+        border-color: $green;
+      }
+    }
+  }
+}
+
+.cambiar_contraseña {
+  color: darken($green, 5%);
+  position: relative;
+  top: -2rem;
+  align-self: flex-end;
+  &:hover {
+    cursor: pointer;
+    color: $green;
+  }
+}
